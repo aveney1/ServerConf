@@ -1,13 +1,13 @@
 [Unit]
 Description=helloworld.js
-After=cloud-final.service
+After=network.target
 
 [Service]
 Environment=NODE_PORT=3000
-Type=simple
-User=admin-user
+Type=one-shot
+User=ec2-user
 ExecStart= /home/ec2-user/.nvm/versions/node/v16.20.2/bin/node /home/ec2-user/helloworld.js
 Restart=always
 
 [Install]
-WantedBy=cloud-init.target
+WantedBy=multi-user.target
