@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Environment=NODE_PORT=3000
-Type=one-shot
+Type=simple
 User=ec2-user
 ExecStart= /home/ec2-user/.nvm/versions/node/v16.20.2/bin/node /home/ec2-user/helloworld.js
 Restart=always
