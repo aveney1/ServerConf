@@ -8,7 +8,7 @@ http.createServer(function (request, response) {
    response.writeHead(200, {'Content-Type': 'text/plain'})
 
    // Send the response body as string below
-   response.end('This is a new message SWDV 660 A.Veney\n')
+   response.end('Weekdays: M T W Th F - Server to test conf files\n')
 }).listen(3333)
 
 // Console will print the message
